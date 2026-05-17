@@ -1,0 +1,78 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Poppins', 'Segoe UI', system-ui, -apple-system, sans-serif;
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+/* ── Responsive helpers ─────────────────────────────────────────── */
+
+/* Grid de 2 columnas → 1 en móvil */
+.grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+@media (max-width: 600px) {
+  .grid-2col {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+/* Grid de 2 columnas compacto (fórmulas, gráficos) → 1 en móvil */
+.grid-2col-sm {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+@media (max-width: 600px) {
+  .grid-2col-sm {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* Header datos del negocio → 1 col en móvil */
+.grid-negocio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 600px) {
+  .grid-negocio {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+}
+
+/* Resumen rápido wrap */
+.resumen-rapido {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: space-around;
+}
+
+/* Padding de tarjeta responsive */
+.card-pad {
+  padding: 24px 24px 28px;
+}
+@media (max-width: 600px) {
+  .card-pad {
+    padding: 16px 14px 20px;
+  }
+}
+
+/* Tabs → texto más pequeño en móvil */
+@media (max-width: 380px) {
+  .tab-btn {
+    padding: 12px 10px !important;
+    font-size: 12px !important;
+    gap: 4px !important;
+  }
+}
