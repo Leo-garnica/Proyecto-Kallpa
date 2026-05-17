@@ -7,6 +7,7 @@ import React, { useState, useEffect } from 'react'
 import { Package, Layers, TrendingUp } from 'lucide-react'
 import { CATEGORIES_NEGOCIO, calcular } from '../utils/calculos.js'
 import TablaCostos from './TablaCostos.jsx'
+import CalculadoraInsumos from './CalculadoraInsumos.jsx'
 import PanelKPIs   from './PanelKPIs.jsx'
 
 const TABS = [
@@ -151,6 +152,11 @@ const TarjetaProducto = ({ producto, acciones, chartLoaded }) => {
                   <p style={{ margin: 0, fontSize: 12, color: '#94a3b8' }}>Dependen de cuánto produces (harina, empaques, materia prima…)</p>
                 </div>
               </div>
+              <CalculadoraInsumos
+                productoId={pid}
+                produccionUnidad={producto.unidad}
+                acciones={acciones}
+              />
               <TablaCostos costos={producto.costosV || []} tipo="V" productoId={pid} acciones={acciones} />
             </div>
           </div>

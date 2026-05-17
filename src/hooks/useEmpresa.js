@@ -29,7 +29,8 @@ export const ACCIONES = {
   AGREGAR_COSTO_FIJO:   'AGREGAR_COSTO_FIJO',
   ACTUALIZAR_COSTO_FIJO:'ACTUALIZAR_COSTO_FIJO',
   ELIMINAR_COSTO_FIJO:  'ELIMINAR_COSTO_FIJO',
-  AGREGAR_COSTO_VAR:    'AGREGAR_COSTO_VAR',
+  AGREGAR_COSTO_VAR:          'AGREGAR_COSTO_VAR',
+  AGREGAR_COSTOS_VAR_BULK:    'AGREGAR_COSTOS_VAR_BULK',
   ACTUALIZAR_COSTO_VAR: 'ACTUALIZAR_COSTO_VAR',
   ELIMINAR_COSTO_VAR:   'ELIMINAR_COSTO_VAR',
   RESETEAR:             'RESETEAR',
@@ -94,6 +95,16 @@ const reducer = (estado, accion) => {
         ),
       }
 
+    case ACCIONES.AGREGAR_COSTOS_VAR_BULK:
+      return {
+        ...estado,
+        productos: estado.productos.map((p) =>
+          p.id === accion.productoId
+            ? { ...p, costosV: [...(p.costosV || []), ...accion.costos] }
+            : p
+        ),
+      }
+
     case ACCIONES.ACTUALIZAR_COSTO_VAR:
       return {
         ...estado,
@@ -140,6 +151,7 @@ export const useEmpresa = () => {
     actualizarCostoFijo: (productoId, costoId, campo, valor) => dispatch({ type: ACCIONES.ACTUALIZAR_COSTO_FIJO, productoId, costoId, campo, valor }),
     eliminarCostoFijo: (productoId, costoId)           => dispatch({ type: ACCIONES.ELIMINAR_COSTO_FIJO, productoId, costoId }),
     agregarCostoVar:  (productoId)                     => dispatch({ type: ACCIONES.AGREGAR_COSTO_VAR, productoId }),
+    agregarCostosVarBulk: (productoId, costos)         => dispatch({ type: ACCIONES.AGREGAR_COSTOS_VAR_BULK, productoId, costos }),
     actualizarCostoVar: (productoId, costoId, campo, valor) => dispatch({ type: ACCIONES.ACTUALIZAR_COSTO_VAR, productoId, costoId, campo, valor }),
     eliminarCostoVar: (productoId, costoId)            => dispatch({ type: ACCIONES.ELIMINAR_COSTO_VAR, productoId, costoId }),
     resetear:         ()                               => dispatch({ type: ACCIONES.RESETEAR }),
