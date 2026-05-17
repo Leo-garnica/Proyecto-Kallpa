@@ -1,6 +1,6 @@
 /**
  * calculos.js
- * Motor de cálculo de KPIs financieros para FinanzasClara.
+ * Motor de cálculo de KPIs financieros para FundacionKallpa.
  */
 
 export const COLORS = {

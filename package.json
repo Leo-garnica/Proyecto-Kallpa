@@ -1,7 +1,7 @@
 {
-  "name": "finanzas-clara",
+  "name": "fundacion-kallpa",
   "version": "2.0.0",
-  "description": "FinanzasClara — Plan de Negocios y Costos con IA",
+  "description": "FundacionKallpa — Plan de Negocios y Costos con IA",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -9,7 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "exceljs": "^4.4.0",
     "@google/generative-ai": "^0.24.1",
+    "exceljs": "^4.4.0",
     "jspdf": "2.5.1",
     "lucide-react": "^0.383.0",
     "react": "18.3.1",

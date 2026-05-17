@@ -1,6 +1,6 @@
 /**
  * App.jsx
- * Componente raíz de FinanzasClara.
+ * Componente raíz de FundacionKallpa.
  * Arquitectura del ZIP + diseño/funcionalidad completa del JSX.
  *
  * Estructura:
@@ -91,7 +91,7 @@ const App = () => {
                 </svg>
               </div>
               <div>
-                <h1 style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.1 }}>FinanzasClara</h1>
+                <h1 style={{ margin: 0, fontSize: 22, fontWeight: 700, letterSpacing: '-0.02em', lineHeight: 1.1 }}>Fundacion-Kallpa</h1>
                 <p style={{ margin: 0, fontSize: 12, color: '#c4b5fd', lineHeight: 1.3 }}>Comprende tus costos · Define tu precio · Conoce tu ganancia</p>
               </div>
             </div>
@@ -219,7 +219,7 @@ const App = () => {
         )}
 
         <div style={{ textAlign: 'center', marginTop: 8, paddingBottom: 16 }}>
-          <span style={{ fontSize: 11, color: '#94a3b8' }}>💾 Datos guardados automáticamente · FinanzasClara</span>
+          <span style={{ fontSize: 11, color: '#94a3b8' }}>💾 Datos guardados automáticamente · FundacionKallpa</span>
         </div>
       </div>
 

@@ -40,7 +40,7 @@ async function hablarJorge(texto, onEnd) {
       headers: {
         'Content-Type': 'application/ssml+xml',
         'X-Microsoft-OutputFormat': 'audio-24khz-48kbitrate-mono-mp3',
-        'User-Agent': 'FinanzasClara/2.0',
+        'User-Agent': 'FundacionKallpa/2.0',
       },
       body: ssml,
     })

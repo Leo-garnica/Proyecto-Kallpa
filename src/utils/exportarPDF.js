@@ -27,7 +27,7 @@ const dibujarEncabezado = (doc, W) => {
   doc.setTextColor(...COLOR_BLANCO)
   doc.setFontSize(18)
   doc.setFont(undefined, 'bold')
-  doc.text('FinanzasClara', W / 2, 12, { align: 'center' })
+  doc.text('FundacionKallpa', W / 2, 12, { align: 'center' })
   doc.setFontSize(9)
   doc.setFont(undefined, 'normal')
   doc.text('Comprende tus costos · Define tu precio · Conoce tu ganancia', W / 2, 19, { align: 'center' })
@@ -191,7 +191,7 @@ export const exportarPDF = (empresa) => {
     doc.setFontSize(7.5)
     doc.setTextColor(...COLOR_TEXTO_SUAVE)
     doc.text(
-      `FinanzasClara  |  Generado el ${new Date().toLocaleDateString('es-BO')}  |  Página ${p} de ${totalPaginas}`,
+      `FundacionKallpa  |  Generado el ${new Date().toLocaleDateString('es-BO')}  |  Página ${p} de ${totalPaginas}`,
       W / 2, 291, { align: 'center' }
     )
     doc.setDrawColor(200, 200, 200)
@@ -199,6 +199,6 @@ export const exportarPDF = (empresa) => {
     doc.line(12, 287, W - 12, 287)
   }
 
-  const nombreArchivo = `FinanzasClara_${(empresa.nombre || 'negocio').replace(/\s+/g, '_')}.pdf`
+  const nombreArchivo = `FundacionKallpa_${(empresa.nombre || 'negocio').replace(/\s+/g, '_')}.pdf`
   doc.save(nombreArchivo)
 }

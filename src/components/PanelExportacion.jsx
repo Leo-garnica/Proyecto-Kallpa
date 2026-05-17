@@ -12,7 +12,7 @@ const PanelExportacion = ({ empresa }) => {
 
   const handleExcel = async () => {
     setCargandoExcel(true)
-    try { exportarExcel(empresa) }
+    try { await exportarExcel(empresa) }
     catch (err) { console.error(err); alert('Error al generar Excel. Revisa la consola.') }
     finally { setCargandoExcel(false) }
   }
